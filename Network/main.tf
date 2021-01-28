@@ -45,6 +45,16 @@ output "rsg" {
   description = "Name of the resource group"
 }
 
+output "vnet_1" {
+  value = module.network.vnet_1
+  description = "Name of the vnet 1"
+}
+
+output "vnet_2" {
+  value = module.network.vnet_2
+  description = "Name of the vnet 2"
+}
+
 output "subnet_name_1" {
   value = module.network.subnet_name_1
   description = "Name of the subnet 1"

@@ -35,11 +35,16 @@ module "vm" {
   location = "northeurope"
   enviroment = "Repaso_1"
   public_ip_name = "public_ip"
+  domain_name_label = "test7109"
   interface_name_1 = "interface1"
   interface_name_2 = "interface2"
   ipconfig_name = "ipconfig"
+  vnet_name_1 = data.terraform_remote_state.network.outputs.vnet_1
+  vnet_name_2 = data.terraform_remote_state.network.outputs.vnet_2
   snet_1 = data.terraform_remote_state.network.outputs.subnet_name_1
   snet_3 = data.terraform_remote_state.network.outputs.subnet_name_3
+  vm_name_1 = "vm1"
+  vm_name_2 = "vm2"
 
 }
 
