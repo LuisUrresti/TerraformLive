@@ -28,7 +28,7 @@ data "terraform_remote_state" "network" {
 }
 
 module "vm" {
-  source = "github.com/LuisUrresti/TerraformModules.git//Network"
+  source = "github.com/LuisUrresti/TerraformModules.git//VirtualMachine"
 
   #Variables
   rsg_name = data.terraform_remote_state.network.outputs.rsg
