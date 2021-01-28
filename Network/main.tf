@@ -30,8 +30,27 @@ module "network" {
   snet_address_1 = "10.10.100.0/24"
   snet_2 = "snet_2"
   snet_address_2 = "10.10.200.0/24"
-  sg1_name = "seg_group_1"
-  secrule1 = "ssh_rule"
-  sg2_name = "seg_group_2"
-  secrule2 = "ssh_rule"
+  vnet_name_2 = "vnet_2"
+  vnet_address_2 = "10.11.0.0/16"
+  snet_3 = "snet_3"
+  snet_address_3 = "10.11.100.0/24"
+  snet_4 = "snet_4"
+  snet_address_4 = "10.11.200.0/24"
+  sg = ["seg_group_1","seg_group_2","seg_group_3","seg_group_4"]
+  secrule = "ssh_rule"
+}
+
+output "rsg" {
+  value = module.network.rsg
+  description = "Name of the resource group"
+}
+
+output "subnet_name_1" {
+  value = module.network.subnet_name_1
+  description = "Name of the subnet 1"
+}
+
+output "subnet_name_3" {
+  value = module.network.subnet_name_3
+  description = "Name of the subnet 3"
 }
