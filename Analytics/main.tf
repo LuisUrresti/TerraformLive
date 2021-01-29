@@ -34,4 +34,5 @@ module "analytics" {
   rsg_name = data.terraform_remote_state.network.outputs.rsg
   location = "northeurope"
   enviroment = "Repaso_1"
+  log_analytics_name = "log-analytics"
 }
