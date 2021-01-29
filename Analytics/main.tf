@@ -27,12 +27,11 @@ data "terraform_remote_state" "network" {
   }
 }
 
-module "database" {
-  source = "github.com/LuisUrresti/TerraformModules.git//Database"
+module "analytics" {
+  source = "github.com/LuisUrresti/TerraformModules.git//Analytics"
 
   #Variables
   rsg_name = data.terraform_remote_state.network.outputs.rsg
   location = "northeurope"
-  postgre_server_name = "sql-server-7109"
-  db_name = "db"
+  enviroment = "Repaso_1"
 }
