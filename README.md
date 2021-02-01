@@ -37,6 +37,7 @@ Firts of all, you should use the commands init, plan and apply inside of the Net
 ### Dependencies
 
 The following resources must exist before the deployment can take place.
+
     - Azure Subscription
     - Storage account resource group ("rsg_storage_account" you could change this name)
     - Storage account  ("stacc7109" you could change this name)
