@@ -1,4 +1,4 @@
-# **Virtual Machine*
+# **Virtual Machine**
 This repository contains the main code which calls to the modules Network and Virtual Machine.
 [https://github.com/LuisUrresti/TerraformLive]
 [https://github.com/LuisUrresti/TerraformModules]
@@ -17,14 +17,14 @@ This code build two interconnected virtual machines. Both machines have a Ubunto
 ## Configuration
 
 |Parameter      | TF Name   | Default Value | Type   | Mandatory | Others
----------------------------------------------------------------------------------------------
+
 |Resource Group | rsg_name  |       N/A     | String | yes       | Name of the resource group
 |Azure Region   | location  |       N/A     | String | yes       | Specifies the supported Azure location
 |Tag Enviroment | enviroment|       N/A     | String | yes       | Tag to group all resources
 
 ### Outputs
 |Output Name | Output value                                            | Description
-----------------------------------------------------------------------------------------------
+
 |rsg         | data.terraform_remote_state.network.outputs.rsg         | Name of the resource group to the other modules
 |subnet_id_1 | data.terraform_remote_state.network.outputs.subnet_id_1 | ID of the subnet 1
 |subnet_id_2 | data.terraform_remote_state.network.outputs.subnet_id_2 | ID of the subnet 2
