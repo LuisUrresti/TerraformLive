@@ -1,5 +1,6 @@
 # **Virtual Machine**
 This repository contains the main code which calls to the modules Network and Virtual Machine.
+
 [https://github.com/LuisUrresti/TerraformLive]
 [https://github.com/LuisUrresti/TerraformModules]
 
@@ -49,13 +50,14 @@ terraform apply
 ### Dependencies
 
 The following resources must exist before the deployment can take place.
+
     - Azure Subscription
     - Storage account resource group ("rsg_storage_account" you could change this name)
     - Storage account  ("stacc7109" you could change this name)
     - Container ("terraform" you could change this name)
 
 ## Architecture
-![ArchitectureDiagram](Resources\ArchitectureDiagram.PNG "Architecture Diagram")
+![ArchitectureDiagram](Resources/ArchitectureDiagram.PNG "Architecture Diagram")
 
 ## Networking
 
