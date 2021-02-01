@@ -42,7 +42,7 @@ The following resources must exist before the deployment can take place.
     - Container ("terraform" you could change this name)
 
 ## Architecture
-![ArchitectureDiagram](Resources\ArchitectureDiagram.PNG "Architecture Diagram")
+![ArchitectureDiagram](Resources/ArchitectureDiagram.PNG "Architecture Diagram")
 
 ## Networking
 
