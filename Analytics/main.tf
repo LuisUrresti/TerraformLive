@@ -13,7 +13,7 @@ terraform {
       resource_group_name = "rsg_storage_account"
       storage_account_name = "stacc7109"
       container_name = "terraform"
-      key = "database/terraform.tfstate"
+      key = "analytics/terraform.tfstate"
   }
 }
 
@@ -34,5 +34,5 @@ module "analytics" {
   rsg_name = data.terraform_remote_state.network.outputs.rsg
   location = "northeurope"
   enviroment = "Repaso_1"
-  log_analytics_name = "log-analytics"
+  log_analytics_name = "log-analytics-7109"
 }
