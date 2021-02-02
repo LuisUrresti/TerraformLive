@@ -18,7 +18,7 @@ terraform {
 }
 
 module "network" {
-  source = "github.com/LuisUrresti/TerraformModules.git//Network?ref=ModulesCounter"
+  source = "github.com/LuisUrresti/TerraformModules.git//Network"
 
   #Variables
   # General
@@ -31,6 +31,9 @@ module "network" {
   vnet_address= ["10.10.0.0/16","10.11.0.0/16"]
   snet = "snet"
   snet_address = ["10.10.100.0/24","10.11.100.0/24"]
+  interface_name_1 = "interface1"
+  interface_name_2 = "interface2"
+  ipconfig_name = "ipconfig"
   # Security Groups
   sg_nsg = ["seg_group_1","seg_group_2"]
   secrule_nsg = "ssh_rule"
@@ -40,9 +43,21 @@ module "network" {
   protocol_nsg = "Tcp"
   source_port_nsg = "*"
   destination_port_nsg = "22"
-  source_addres_nsg = "*"
+  source_address_nsg = "*"
   destination_address_nsg = "*"
-
+  # Peering
+  peering1to2 = "peering1to2"
+  peering2to1 = "peering2to1"
+  # Virtual Machine
+  vm_name_1 = "vm1"
+  vm_name_2 = "vm2"
+  ssh_public_key_file = "../Resources/key.pub"
+  vm_size = "Standard_A1_v2"
+  admin_username = "adminuser"
+  publisher = "Canonical"
+  offer = "UbuntuServer" 
+  sku = "18.04-LTS"
+  storage_account_type = "Standard_LRS"
 }
 
 output "rsg" {
@@ -50,32 +65,5 @@ output "rsg" {
   description = "Name of the resource group"
 }
 
-output "subnet_id_1" {
-  value = module.network.subnet_id_1
-  description = "ID of the subnet 1"
-}
 
-output "subnet_id_3" {
-  value = module.network.subnet_id_3
-  description = "ID of the subnet 3"
-}
 
-/* output "vnet_1" {
-  value = module.network.vnet_1
-  description = "Name of the vnet 1"
-}
-
-output "vnet_2" {
-  value = module.network.vnet_2
-  description = "Name of the vnet 2"
-}
-
-output "subnet_name_1" {
-  value = module.network.subnet_name_1
-  description = "Name of the subnet 1"
-}
-
-output "subnet_name_3" {
-  value = module.network.subnet_name_3
-  description = "Name of the subnet 3"
-} */
