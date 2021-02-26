@@ -1,0 +1,16 @@
+{
+    "actions": {
+        "Initialize_variable": {
+            "inputs": {
+                "variables": [
+                    {
+                        "name": "Date",
+                        "type": "string"
+                    }
+                ]
+            },
+            "runAfter": {},
+            "type": "InitializeVariable"
+        }
+    }
+}
