@@ -1,0 +1,11 @@
+{
+    "triggers": {
+        "Recurrence": {
+            "recurrence": {
+                "frequency": "Minute",
+                "interval": 15
+            },
+            "type": "Recurrence"
+        }
+    }
+}
