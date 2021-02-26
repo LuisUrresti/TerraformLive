@@ -21,8 +21,8 @@
         "triggers": {
             "Recurrence": {
                 "recurrence": {
-                    "frequency": "Day",
-                    "interval": 1
+                    "frequency": "Minute",
+                    "interval": 15
                 },
                 "type": "Recurrence"
             }
